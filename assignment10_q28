@@ -1,0 +1,36 @@
+package day25_assisgnment10;
+
+public class assignment10_q28 {
+
+	public static void main(String[] args) {
+/*
+Question-28
+
+This method gets two strings (text and badWord) and
+returns a string. Basicly what it does is take out all the occurrences of badWord in text.
+
+Sample Output:
+
+     clean ("one two three","two")
+     returns "one three"
+
+     clean ("foo bar","foo")
+     returns "bar"
+
+     clean ("he said bla bla bla","bla")
+     returns "he said "
+ */
+		
+			clean("foo bar foo", "foo");
+	}
+	
+	public static void clean(String a, String b) {
+		
+		String str = "";
+		
+		str = a.replace(b, "");
+		
+		System.out.println(str);
+	}
+
+}
