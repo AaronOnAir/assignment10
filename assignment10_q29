@@ -1,0 +1,34 @@
+package day25_assisgnment10;
+
+public class assignment10_q29 {
+
+	public static void main(String[] args) {
+
+/*
+Question-29
+
+This method gets a string and an int,
+it returns a string. What it does is to limit
+the inputted string to a creating number of characters.
+
+Sample Output:
+
+     limit("abcd",2)
+     returns "ab"
+
+     limit("bla bla",3)
+     returns "bla"
+ */
+		
+		
+		limit("abcd",2);
+
+		
+	}
+	
+	public static void limit(String a, int b) {
+		
+		System.out.println(a.substring(0,b));
+	}
+	
+}
