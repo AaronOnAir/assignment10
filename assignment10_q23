@@ -1,0 +1,56 @@
+package day25_assisgnment10;
+
+public class assignment10_q23 {
+
+	public static void main(String[] args) {
+
+/*
+Question-23
+
+A sandwich is two pieces of bread with something in between.
+Print the string that is between the first and last appearance of "bread"
+in the given string, or return string "nothing" if there are not two pieces of bread.
+
+Sample Output:
+
+     input: breadjambread
+     output: jam
+
+     input: xxbreadjambreadyy
+     output: jam
+
+     input: xxbreadapple
+     output: nothing
+
+     input: breadbutterbread
+     output: butter
+ */
+		
+		String str = "breadjambread";
+		
+		int count = 0;
+		
+		for(int i = 0; i<=str.length()-5; i++) {
+			
+			if(str.substring(i, i+5).equals("bread")) {
+				
+				count++;
+				
+				if(count==2) {
+										
+					String newString = str.substring(i, i);
+					
+				}else {
+					System.out.println("nothing!");
+	
+				}
+			}
+			System.out.println(str.substring(i, i+5));
+
+		}
+	
+	
+	}
+	
+	
+}
