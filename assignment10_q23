@@ -1,5 +1,7 @@
 package day25_assisgnment10;
 
+import java.util.*;  
+ 
 public class assignment10_q23 {
 
 	public static void main(String[] args) {
@@ -26,31 +28,38 @@ Sample Output:
      output: butter
  */
 		
-		String str = "breadjambread";
-		
-		int count = 0;
-		
-		for(int i = 0; i<=str.length()-5; i++) {
-			
-			if(str.substring(i, i+5).equals("bread")) {
-				
-				count++;
-				
-				if(count==2) {
-										
-					String newString = str.substring(i, i);
-					
-				}else {
-					System.out.println("nothing!");
-	
-				}
-			}
-			System.out.println(str.substring(i, i+5));
+		 Scanner scan = new Scanner(System.in);
+		 
+	        System.out.print("Input: ");
+	        String str = scan.next();
 
-		}
-	
-	
+	        int count = 0;
+
+	        for (int i = 0; i < str.length() - 4; i++) {
+	            
+	        	if (str.substring(i, i + 5).equalsIgnoreCase("bread")) {
+	                count++;
+	            }
+	        }
+	        
+	        if (count < 2 || count > 2) {
+	            System.out.println("Nothing!");
+	            
+	        } else {
+
+	            String word = str.replaceAll("bread", "*");
+
+	            int n1 = word.indexOf('*');
+	            int n2 = word.lastIndexOf('*');
+
+	            if (n1+1 == n2) {
+	                System.out.println("Empty sandwich!");
+	            } else {
+	                System.out.println("Output: " + word.substring(n1 + 1, n2));
+	            }
+	            
+	            scan.close();
+	        }
 	}
-	
 	
 }
